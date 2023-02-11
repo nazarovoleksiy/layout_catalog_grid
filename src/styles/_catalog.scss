@@ -1,26 +1,17 @@
 .catalog {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, $s-card-width);
   justify-content: center;
-  align-content: center;
   grid-gap: 48px;
 
-  @media (max-width: 1023px) {
-    grid-template-columns: auto auto auto;
-  }
-
-  @media (max-width: 767px) {
-    grid-template-columns: auto auto;
-  }
-  @media (max-width: 487px) {
-    grid-template-columns: auto;
-  }
+  @include for-width-1023px;
+  @include for-width-767px;
+  @include for-width-487px;
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
