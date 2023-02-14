@@ -1,17 +1,5 @@
-@mixin for-width-1023px {
-  @media (max-width: 1023px) {
-    grid-template-columns: repeat(3, $s-card-width);
-  }
-}
-
-@mixin for-width-767px {
-  @media (max-width: 767px) {
-    grid-template-columns: repeat(2, $s-card-width);
-  }
-}
-
-@mixin for-width-487px {
-  @media (max-width: 487px) {
-    grid-template-columns: $s-card-width;
+@mixin media-width-template($max-widht, $template-columns-number) {
+  @media (max-width: $max-widht) {
+    grid-template-columns: repeat($template-columns-number, $s-card-width);
   }
 }

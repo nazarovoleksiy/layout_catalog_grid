@@ -4,9 +4,9 @@
   justify-content: center;
   grid-gap: 48px;
 
-  @include for-width-1023px;
-  @include for-width-767px;
-  @include for-width-487px;
+  @include media-width-template(1023px, 3);
+  @include media-width-template(767px, 2);
+  @include media-width-template(487px, 1);
 
   &__card {
     display: flex;
